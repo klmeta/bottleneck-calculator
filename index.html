@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottleneck Calculator Lite — Баланс твоего ПК</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>Bottleneck Calculator <span>Lite</span></h1>
+            <p class="subtitle">Узнай, насколько сбалансирована твоя игровая сборка</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Секция калькулятора -->
+            <section class="calc-section">
+                <div class="calc-card">
+                    <div class="input-group">
+                        <label>Ваш Процессор (CPU)</label>
+                        <select id="cpu">
+                            <option value="1">Бюджетный (Pentium / Athlon / i3-10xxx)</option>
+                            <option value="3" selected>Средний (i5-12400 / Ryzen 5 5600)</option>
+                            <option value="5">Мощный (i7-13700 / Ryzen 7 7700)</option>
+                            <option value="8">Флагман (i9-14900 / Ryzen 9 7950X)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Ваша Видеокарта (GPU)</label>
+                        <select id="gpu">
+                            <option value="1">Начальная (GTX 1650 / RX 6400)</option>
+                            <option value="3" selected>Средняя (RTX 3060 / RX 6700)</option>
+                            <option value="6">Мощная (RTX 4070 Ti / RX 7900)</option>
+                            <option value="9">Топовая (RTX 4090)</option>
+                        </select>
+                    </div>
+
+                    <button id="btn">РАССЧИТАТЬ СОВМЕСТИМОСТЬ</button>
+
+                    <div id="result" class="result-box hidden">
+                        <h2 id="res-title"></h2>
+                        <p id="res-text"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция информации (НОВОЕ!) -->
+            <section class="info-section">
+                <div class="info-card">
+                    <h2>Что такое Bottleneck?</h2>
+                    <p>Это эффект «узкого места». Представь, что у тебя мощная видеокарта (широкая труба), но слабый процессор (узкое горлышко). Вода не сможет течь быстро, как бы сильно ты ни открывал кран.</p>
+                    <p>В играх это проявляется как низкий FPS при недогруженной видеокарте или внезапные фризы.</p>
+                </div>
+
+                <div class="info-card">
+                    <h2>Как работает этот Lite-калькулятор?</h2>
+                    <p>Мы используем упрощенный алгоритм весовых коэффициентов. Он сравнивает поколения и производительность комплектующих за последние 3-4 года. Для 100% точности нужны реальные тесты в конкретных играх.</p>
+                </div>
+
+                <div class="info-card advice">
+                    <h2>Совет по апгрейду</h2>
+                    <p id="advice-text">Выберите комплектующие, чтобы получить персональный совет.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2024 Проект "Bottleneck Calculator Lite"</p>
+                <p>Выполнил студент 1 курса: <strong>[ТВОЕ ИМЯ]</strong></p>
+                <p>Стек: HTML5, CSS3, JavaScript (Vanilla)</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
